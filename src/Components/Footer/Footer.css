@@ -1,0 +1,8 @@
+/* Footer.css */
+.footer {
+    background-color: #007bff; /* Primary blue */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
