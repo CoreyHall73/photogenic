@@ -1,0 +1,17 @@
+/* Default light theme */
+:root {
+    --background-color: #f5f5f5;
+    --text-color: #000000;
+    --primary-color: #6a0dad; /* Purple */
+    --secondary-color: #000000; /* Black */
+    --font-family: 'Arial', sans-serif;
+  }
+  
+  /* Dark theme overrides */
+  [data-theme='dark'] {
+    --background-color: #000000; /* Black */
+    --text-color: #ffffff;
+    --primary-color: #9b59b6; /* Lighter Purple */
+    --secondary-color: #6a0dad; /* Darker Purple */
+    --font-family: 'Arial', sans-serif;
+  }
