@@ -1,0 +1,77 @@
+// Import color functions (make sure this is correctly imported if you don't already have it)
+@import 'functions';
+
+// Define your new custom colors for Blue & Gold and Purple & Blue themes
+
+$blue-gold-dark: #102a39;
+$blue-gold-light: #eab754;
+$purple-blue-dark: #18142d;
+$purple-blue-light: #a199cf;
+
+// Custom color maps for each theme
+$custom-colors: (
+  'blue-gold-dark': $blue-gold-dark,
+  'blue-gold-light': $blue-gold-light,
+  'purple-blue-dark': $purple-blue-dark,
+  'purple-blue-light': $purple-blue-light
+);
+
+// Merge the custom colors into the theme
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Convert theme colors to RGB for utilities
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, '$value');
+
+// Define utilities for colors in RGB
+$utilities-colors: $theme-colors-rgb;
+
+// Define text utilities based on theme colors
+$utilities-text: map-merge(
+  $utilities-colors,
+  (
+    'black': to-rgb($black),
+    'white': to-rgb($white),
+    'body': to-rgb($body-color),
+  )
+);
+
+// Create text color utilities for emphasis
+$utilities-text-colors: map-loop($utilities-text, rgba-css-var, '$key', 'text');
+
+// Create emphasis color utilities for text
+$utilities-text-emphasis-colors: (
+  'primary-emphasis': var(--#{$prefix}primary-text-emphasis),
+  'secondary-emphasis': var(--#{$prefix}secondary-text-emphasis),
+  'success-emphasis': var(--#{$prefix}success-text-emphasis),
+  'info-emphasis': var(--#{$prefix}info-text-emphasis),
+  'warning-emphasis': var(--#{$prefix}warning-text-emphasis),
+  'danger-emphasis': var(--#{$prefix}danger-text-emphasis),
+  'light-emphasis': var(--#{$prefix}light-text-emphasis),
+  'dark-emphasis': var(--#{$prefix}dark-text-emphasis),
+);
+
+// Define background utilities
+$utilities-bg: map-merge(
+  $utilities-colors,
+  (
+    'black': to-rgb($black),
+    'white': to-rgb($white),
+    'body': to-rgb($body-bg),
+  )
+);
+
+// Loop through background utilities for CSS vars
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, '$key', 'bg');
+
+// Define border utilities
+$utilities-border: map-merge(
+  $utilities-colors,
+  (
+    'black': to-rgb($black),
+    'white': to-rgb($white),
+    'body': to-rgb($body-color),
+  )
+);
+
+// Loop through border utilities for CSS vars
+$utilities-border-colors: map-loop($utilities-border, rgba-css-var, '$key', 'border');

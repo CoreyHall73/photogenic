@@ -1,0 +1,220 @@
+// Purple Blue Dark Theme
+@include color-mode(cv-purple-blue-dark, true) {
+    color-scheme: cv-purple-blue-dark;
+  
+    $custom-colors: (
+      'primary': $blue-royal,
+      'primary-light': $blue-royal-400,
+      'primary-lighter': $blue-royal-200,
+      'primary-dark': $blue-royal-600,
+      'primary-darker': $blue-royal-800,
+      'secondary': $lavender-blue,
+      'light': $cv-white,
+      'dark': $cv-black,
+      'base': $dark-blue,
+      'base-alt': $dark-blue-400,
+      'service-hero-lightest': $service-lightest-blue,
+      'service-hero-light': $service-light-blue,
+      'service-hero-medium': $service-medium-blue,
+      'service-hero-dark': $service-dark-blue,
+    );
+  
+    @import 'maps';
+    $utilities: null;
+    $utilities: ();
+    @import 'utilities';
+    @import '~bootstrap/scss/tables';
+    @import '~bootstrap/scss/buttons';
+    @import '~bootstrap/scss/transitions';
+    @import '~bootstrap/scss/dropdown';
+    @import '~bootstrap/scss/button-group';
+    @import '~bootstrap/scss/nav';
+    @import '~bootstrap/scss/navbar';
+    @import '~bootstrap/scss/card';
+    @import '~bootstrap/scss/accordion';
+    @import '~bootstrap/scss/breadcrumb';
+    @import '~bootstrap/scss/pagination';
+    @import '~bootstrap/scss/badge';
+    @import '~bootstrap/scss/alert';
+    @import '~bootstrap/scss/progress';
+    @import '~bootstrap/scss/list-group';
+    @import '~bootstrap/scss/close';
+    @import '~bootstrap/scss/toasts';
+    @import '~bootstrap/scss/modal';
+    @import '~bootstrap/scss/tooltip';
+    @import '~bootstrap/scss/popover';
+    @import '~bootstrap/scss/carousel';
+    @import '~bootstrap/scss/spinners';
+    @import '~bootstrap/scss/offcanvas';
+    @import '~bootstrap/scss/placeholders';
+  
+    --bs-body-color: #{$cv-white};
+    --bs-body-color-rgb: #{to-rgb($cv-white)};
+    --bs-body-bg: #{$darker-blue};
+    --bs-body-bg-rgb: #{to-rgb($darker-blue)};
+    --bs-nav-link-hover-color: #{$dark-blue};
+  
+    --bs-emphasis-color: #{$body-emphasis-color-dark};
+    --bs-emphasis-color-rgb: #{to-rgb($body-emphasis-color-dark)};
+  
+    --bs-secondary-color: #{$body-secondary-color-dark};
+    --bs-secondary-color-rgb: #{to-rgb($body-secondary-color-dark)};
+    --bs-secondary-bg: #{$body-secondary-bg-dark};
+    --bs-secondary-bg-rgb: #{to-rgb($body-secondary-bg-dark)};
+  
+    --bs-tertiary-color: #{$body-tertiary-color-dark};
+    --bs-tertiary-color-rgb: #{to-rgb($body-tertiary-color-dark)};
+    --bs-tertiary-bg: #{$body-tertiary-bg-dark};
+    --bs-tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
+  
+    --bs-offcanvas-color: var(--bs-light-text);
+    --bs-offcanvas-bg: var(--bs-primary-dark);
+  
+    @each $color, $value in $theme-colors {
+      --bs-#{$color}: #{$value};
+      --bs-#{$color}-rgb: #{to-rgb($value)};
+    }
+  
+    @each $color, $value in $theme-colors-text-dark {
+      --bs-#{$color}-text-emphasis: #{$value};
+    }
+  
+    @each $color, $value in $theme-colors-bg-subtle-dark {
+      --bs-#{$color}-bg-subtle: #{$value};
+    }
+  
+    @each $color, $value in $theme-colors-border-subtle-dark {
+      --bs-#{$color}-border-subtle: #{$value};
+    }
+  
+    --bs-heading-color: #{$headings-color-dark};
+  
+    --bs-link-color: #{$link-color-dark};
+    --bs-link-hover-color: #{$link-hover-color-dark};
+    --bs-link-color-rgb: #{to-rgb($link-color-dark)};
+    --bs-link-hover-color-rgb: #{to-rgb($link-hover-color-dark)};
+  
+    --bs-code-color: #{$code-color-dark};
+  
+    --bs-border-color: #{$border-color-dark};
+    --bs-border-color-translucent: #{$border-color-translucent-dark};
+  
+    --bs-form-valid-color: #{$form-valid-color-dark};
+    --bs-form-valid-border-color: #{$form-valid-border-color-dark};
+    --bs-form-invalid-color: #{$form-invalid-color-dark};
+    --bs-form-invalid-border-color: #{$form-invalid-border-color-dark};
+    // Helpers
+    @import '~bootstrap/scss/helpers';
+  
+    // Utilities
+    @import '~bootstrap/scss/utilities/api';
+  }
+  
+  // Purple Blue Light Theme
+  @include color-mode(cv-purple-blue-light, true) {
+    color-scheme: cv-purple-blue-light;
+  
+    $custom-colors: (
+      'primary': $blue-sky,
+      'primary-light': $blue-sky-400,
+      'primary-lighter': $blue-sky-200,
+      'primary-dark': $blue-sky-600,
+      'primary-darker': $blue-sky-800,
+      'secondary': $lavender-blue,
+      'light': $cv-white,
+      'dark': $cv-black,
+      'base': $lavender-blue-200,
+      'base-alt': $lavender-blue-250,
+      'service-hero-lightest': $service-lightest-blue,
+      'service-hero-light': $service-light-blue,
+      'service-hero-medium': $service-medium-blue,
+      'service-hero-dark': $service-dark-blue,
+    );
+  
+    @import 'maps';
+    $utilities: null;
+    $utilities: ();
+    @import 'utilities';
+    @import '~bootstrap/scss/tables';
+    @import '~bootstrap/scss/buttons';
+    @import '~bootstrap/scss/transitions';
+    @import '~bootstrap/scss/dropdown';
+    @import '~bootstrap/scss/button-group';
+    @import '~bootstrap/scss/nav';
+    @import '~bootstrap/scss/navbar';
+    @import '~bootstrap/scss/card';
+    @import '~bootstrap/scss/accordion';
+    @import '~bootstrap/scss/breadcrumb';
+    @import '~bootstrap/scss/pagination';
+    @import '~bootstrap/scss/badge';
+    @import '~bootstrap/scss/alert';
+    @import '~bootstrap/scss/progress';
+    @import '~bootstrap/scss/list-group';
+    @import '~bootstrap/scss/close';
+    @import '~bootstrap/scss/toasts';
+    @import '~bootstrap/scss/modal';
+    @import '~bootstrap/scss/tooltip';
+    @import '~bootstrap/scss/popover';
+    @import '~bootstrap/scss/carousel';
+    @import '~bootstrap/scss/spinners';
+    @import '~bootstrap/scss/offcanvas';
+    @import '~bootstrap/scss/placeholders';
+  
+    --bs-body-color: #{$black};
+    --bs-body-color-rgb: #{to-rgb($black)};
+    --bs-body-bg: #{$cv-white};
+    --bs-body-bg-rgb: #{to-rgb($cv-white)};
+    --bs-nav-link-hover-color: #{$gold};
+  
+    --bs-emphasis-color: #{$body-emphasis-color};
+    --bs-emphasis-color-rgb: #{to-rgb($body-emphasis-color)};
+  
+    --bs-secondary-color: #{$body-secondary-color};
+    --bs-secondary-color-rgb: #{to-rgb($body-secondary-color)};
+    --bs-secondary-bg: #{$body-secondary-bg};
+    --bs-secondary-bg-rgb: #{to-rgb($body-secondary-bg)};
+  
+    --bs-tertiary-color: #{$body-tertiary-color};
+    --bs-tertiary-color-rgb: #{to-rgb($body-tertiary-color)};
+    --bs-tertiary-bg: #{$body-tertiary-bg};
+    --bs-tertiary-bg-rgb: #{to-rgb($body-tertiary-bg)};
+  
+    @each $color, $value in $theme-colors {
+      --bs-#{$color}: #{$value};
+      --bs-#{$color}-rgb: #{to-rgb($value)};
+    }
+  
+    @each $color, $value in $theme-colors-text {
+      --bs-#{$color}-text-emphasis: #{$value};
+    }
+  
+    @each $color, $value in $theme-colors-bg-subtle {
+      --bs-#{$color}-bg-subtle: #{$value};
+    }
+  
+    @each $color, $value in $theme-colors-border-subtle {
+      --bs-#{$color}-border-subtle: #{$value};
+    }
+  
+    --bs-heading-color: #{$headings-color};
+  
+    --bs-link-color: #{$link-color};
+    --bs-link-hover-color: #{$link-hover-color};
+    --bs-link-color-rgb: #{to-rgb($link-color)};
+    --bs-link-hover-color-rgb: #{to-rgb($link-hover-color)};
+    --bs-code-color: #{$code-color};
+  
+    --bs-border-color: #{$border-color-light};
+    --bs-border-color-translucent: #{$border-color-translucent};
+  
+    --bs-form-valid-color: #{$form-valid-color};
+    --bs-form-valid-border-color: #{$form-valid-border-color};
+    --bs-form-invalid-color: #{$form-invalid-color};
+    --bs-form-invalid-border-color: #{$form-invalid-border-color};
+    // Helpers
+    @import '~bootstrap/scss/helpers';
+  
+    // Utilities
+    @import '~bootstrap/scss/utilities/api';
+  }
+  
