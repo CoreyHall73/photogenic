@@ -1,0 +1,12 @@
+.theme-dropdown-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .theme-dropdown .dropdown-menu {
+    height: fit-content;
+  }
+  
+  .theme-dropdown-btn::after {
+    display: none !important;
+  }
